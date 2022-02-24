@@ -28,6 +28,7 @@ class StudentController extends Controller
     public function store(Request $request)
     {
         $input = $request->all();
+       // $image=$input->
         Student::create($input);
         return redirect('student')->with('flash_message', 'Contact Addedd!'); 
     
@@ -48,9 +49,12 @@ class StudentController extends Controller
     }
 
    
-    public function update(Request $request, $id)
+    public function update(Request $request, $regno)
     {
-        //
+        $students=Student::find($regno);
+        $input=$request->all();
+       $students->update($input);
+       return redirect('student')->with('flash_message','student updated');
     }
 
     

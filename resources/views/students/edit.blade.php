@@ -6,6 +6,8 @@
 	<title>UPDATE</title>
 </head>
 <body>
+ 
+
 <form action="{{ url('student/'.$students->regno) }} " method="POST">
 {!! csrf_field() !!}
 @method("PATCH")
@@ -13,7 +15,7 @@
       style="font-size: 20px;text-align: center;"  >
 
 
-<tr height="100%"><td >
+<tr height="100%"><td ><h1 style="font-family: sans-serif;color: forestgreen;"><center><u>UPDATE</u></center></h1>
 <table style="font-family:!important;font-weight: bold;background-color: beige;border-radius: 10px;" >
   <tr><td>Registration number:</td><td><input style="height: 30px;font-size: 16pt;border-radius: 5px;text-align:center; " type="text" name="regno"  size="30" value="{{$students->regno}}" ></td>
    <tr><td>Name:</td><td><input style="height: 30px;font-size: 16pt;border-radius: 5px;text-align: center;"type="text" name="name" size="30" value="{{$students->name}}"></td></tr>
@@ -32,7 +34,7 @@
       </script> -->
 
       </td></tr>
- <tr><td colspan="5"><center><input style="font-size:20px; background-color: lightblue;" type="submit" name="" value="update">&nbsp &nbsp<input style="font-size:20px;background-color: lightblue;" type="reset" name="" value="Clear" onclick=""></center></td></tr>       
+ <tr><td colspan="5"><center><input style="font-size:20px; background-color: lightblue;" type="submit" name="" value="update"></center></td></tr>       
 
 </table>
 
