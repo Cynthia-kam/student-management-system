@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string("regno");
             $table->string("name");
             $table->string("department");
-            $table->binary("photo");
+            $table->string("photo")->default('default.png');
         });
     }
 

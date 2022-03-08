@@ -1,11 +1,20 @@
 <!DOCTYPE html>
 <html>
+<style type="text/css">
+     .main{
+margin-top: 150px;
+height: 100%;
+width: 50%;
+
+float: right;
+   } 
+</style>
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>UPDATE</title>
 </head>
-<body>
+<body class="main">
  
 
 <form action="{{ url('student/'.$students->regno) }} " method="POST">

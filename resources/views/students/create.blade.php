@@ -1,6 +1,33 @@
 
 <!DOCTYPE html>
 <html lang="en">
+<style type="text/css">
+   .main{
+margin-top: 150px;
+height: 100%;
+width: 50%;
+
+
+   } 
+   .body{
+    background-image: url(/image/bg4.jpg);
+    background-repeat: no-repeat;
+    background-size: 57% 120%;
+    float: right;
+    
+   }
+   input[type=text]{
+     border: 2px solid red;
+   }
+   input[type=submit],[type=reset]{
+    border-radius: 7px;
+    width: 70px;
+    height: 50px;
+     border: 2px solid blanchedalmond;
+   }
+   
+
+</style>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,35 +36,32 @@
     
 
 </head>
-<body>
-    <h1><center><u>CREATE</u></center></h1>
-    <form action="{{ url('student') }} " method="POST">
+<body class="body">
+
+    <div class="main">
+
+    <form enctype="multipart/form-data" action="{{ url('student') }} " method="POST" style="font-size: 20px;" style="font-family: fantasy;">
 {!! csrf_field() !!}
-    <table width=1200 height=600 
-     align="center" style="font-size: 20px;" ><tr style="font-family: fantasy;" >
+   
 
+  <label>Registration number:</label><input style="height: 30px;font-size: 16pt;border-radius: 5px;" type="text" name="regno"  size="30" required ></br></br>
 
-<tr height="30%" style="background-color: lightblue;"><td >
-<table style="font-family:sans-serif;">
-  <tr><td>Registration number:</td><td><input style="height: 30px;font-size: 16pt;border-radius: 5px;" type="text" name="regno"  size="30" required ></td>
-      <td>Name:</td><td><input style="height: 30px;font-size: 16pt;border-radius: 5px;"type="text" name="name" size="30"></td></tr>
+   <label>Name:</label>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<input style="height: 30px;font-size: 16pt;border-radius: 5px;"type="text" name="name" size="30"></br></br>
 
- <tr><td>Department:</td><td><input style="height: 30px;font-size: 16pt;border-radius:5px;" type="text" name="department"  size="30"></td>
-      <td>Photo</td><td><input type="file" name="photo" accept="image/*" >
+ <label>Department:</label>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<input style="height: 30px;font-size: 16pt;border-radius:5px;" type="text" name="department"  size="30"></br></br>
+<label>Photo</label>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<input type="file" name="photo"  ></br></br>
      
 
-      </td></tr>
- <tr><td colspan="5"><center><input style="font-size:20px; background-color: lightcyan;" type="submit" name="" value="save">&nbsp &nbsp<input style="font-size:20px;background-color: lightcyan;" type="reset" name="" value="Clear" onclick=""></center></td></tr>       
-
-</table>
+ &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     
+ <input style="font-size:20px; background-color: lightcyan;" type="submit" name="" value="save">&nbsp &nbsp<input style="font-size:20px;background-color: lightcyan;" type="reset" name="" value="Clear" onclick="">       
 
 
-</td></tr>
 
 
-<tr><td>
 
 
- </td></tr>   
+
+  </form>
+</div>
 </body>
 </html>

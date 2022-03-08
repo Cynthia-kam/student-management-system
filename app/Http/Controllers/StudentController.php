@@ -10,8 +10,8 @@ class StudentController extends Controller
     public function index()
     {
              $students=Student::all();
-               return view ('students.index')->with('students', $students);
-        return view ('students.index');
+            return view ('students.index')->with('students', $students);
+             return view ('students.index');
              
     }
 
@@ -27,14 +27,12 @@ class StudentController extends Controller
     
     public function store(Request $request)
     {
-        $input = $request->all();
-       // $image=$input->
-        Student::create($input);
-        return redirect('student')->with('flash_message', 'Contact Addedd!'); 
-    
-
-    
-      }
+         $input = $request->all();
+         
+         Student::create($input);
+        return redirect('student');
+      
+      } 
 
     public function show($id)
     {
@@ -62,6 +60,7 @@ class StudentController extends Controller
     public function destroy($regno)
     {
     Student::destroy($regno);
+    return redirect('student');
   
     }
 }
